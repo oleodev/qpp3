@@ -7,7 +7,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    /* background-image: url('../images/plano-fundo/bg_1.jpg'); */ /* Comentado para usar Tailwind */
+    /* background-image: url('../../images/plano-fundo/bg_1.jpg'); */ /* Comentado para usar Tailwind */
     /* background-attachment: fixed; */ /* Comentado para usar Tailwind */
     /* background-size: 120% auto; */ /* Comentado para usar Tailwind */
     /* background-position: center 30%; */ /* Comentado para usar Tailwind */
@@ -429,7 +429,7 @@ body {
 }
 
 .footer {
-    background-image: url('../images/plano-fundo/bg_9-1.jpg');
+    background-image: url('../../images/plano-fundo/bg_9-1.jpg');
     background-size: cover;
     background-position: center;
     padding: 2rem 0;
@@ -587,7 +587,7 @@ body {
 }
 .bonus-block-2 {
   background: #f6fff7;
-  color: #2e7d32;
+  color: #2e7d35;
   border-left: 5px solid #43a047;
 }
 .bonus-block-3 {
