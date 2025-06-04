@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upsell Vídeo</title>
+  <link rel="preload" href="https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/players/68234476549cb5c7291ba059/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+  <link rel="preload" href="https://images.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/players/68234476549cb5c7291ba059/thumbnail.jpg" as="image">
+  <link rel="preload" href="https://cdn.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/682319696e6c923763b4dbfa/main.m3u8" as="fetch">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #111;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    .banner-topo {
+      width: 100%;
+      background: #ffd700;
+      color: #111;
+      font-weight: bold;
+      text-align: center;
+      padding: 14px 2vw 12px 2vw;
+      font-size: 1.08rem;
+      letter-spacing: 0.5px;
+      box-sizing: border-box;
+    }
+    .video-container {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0 auto;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      box-sizing: border-box;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .video-container > div {
+      width: 100vw;
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+    }
+    @media (max-width: 600px) {
+      .banner-topo { font-size: 0.98rem; padding: 10px 2vw 8px 2vw; }
+      .video-container > div { max-width: 100vw; }
+      .video-container { padding-left: 4vw; padding-right: 4vw; }
+    }
+  </style>
+  <!-- Scripts UTMify -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+  <script>
+    window.pixelId = "681a6d134a2a05ae986fc0a6";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+</head>
+<body>
+  <div class="banner-topo">ATENÇÃO: sua compra ainda não está concluída. Fique até o final do vídeo!</div>
+  <div class="video-container" style="margin-top: 30px;">
+    <div>
+      <div id="vid_68234476549cb5c7291ba059" style="position: relative; width: 100%; padding: 125% 0 0;">
+        <img id="thumb_68234476549cb5c7291ba059" src="https://images.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/players/68234476549cb5c7291ba059/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail">
+        <div id="backdrop_68234476549cb5c7291ba059" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div>
+      </div>
+      <script type="text/javascript" id="scr_68234476549cb5c7291ba059">
+        var s=document.createElement("script");
+        s.src="https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/players/68234476549cb5c7291ba059/player.js",
+        s.async=!0,document.head.appendChild(s);
+      </script>
+    </div>
+  </div>
+</body>
+<script>
+  // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+  const link = 'https://quaresmapadrepio.com/padrepio/oracoes-sete-dias/';
+
+  function setBackRedirect(url) {
+      let urlBackRedirect = url;
+      urlBackRedirect = urlBackRedirect =
+          urlBackRedirect.trim() +
+          (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+          document.location.search.replace('?', '').toString();
+
+      history.pushState({}, '', location.href);
+      history.pushState({}, '', location.href);
+      history.pushState({}, '', location.href);
+
+      window.addEventListener('popstate', () => {
+          setTimeout(() => {
+              location.href = urlBackRedirect;
+          }, 1);
+      });
+  }
+
+  setBackRedirect(link);
+</script>
+</html>

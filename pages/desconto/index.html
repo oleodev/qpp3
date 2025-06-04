@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quaresma do Padre Pio - Teste Redirecionamento</title>
+    <script>
+        // Função para pegar parâmetros da URL
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const queryParams = {};
+            for (const [key, value] of params.entries()) {
+                queryParams[key] = value;
+            }
+            return queryParams;
+        }
+
+        // Função para adicionar parâmetros a uma URL
+        function addParamsToUrl(url, params) {
+            const searchParams = new URLSearchParams(params).toString();
+            // Garante que adiciona ? ou & corretamente
+            return url + (searchParams ? '?' + searchParams : '');
+        }
+
+        // Função para redirecionar
+        function redirect() {
+            // Pega todos os parâmetros da URL atual
+            const queryParams = getQueryParams();
+            
+            // Escolhe aleatoriamente entre as duas páginas
+            const isPageA = Math.random() < 0.5;
+            const targetUrl = isPageA 
+                ? 'pagina-1.html'
+                : 'pagina-2.html';
+            
+            // Adiciona os parâmetros source_page e RedirectCheckout
+            queryParams['source_page'] = isPageA ? 'A' : 'B';
+            queryParams['RedirectCheckout'] = isPageA ? 'A' : 'B';
+            
+            // Adiciona os parâmetros da URL original à URL de destino
+            const finalUrl = addParamsToUrl(targetUrl, queryParams);
+            
+            // Redireciona
+            window.location.href = finalUrl;
+        }
+
+        // Redireciona assim que a página carregar
+        window.onload = redirect;
+    </script>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif;">
+        <p>Redirecionando (teste)...</p>
+    </div>
+</body>
+</html>
