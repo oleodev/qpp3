@@ -49,7 +49,7 @@ body {
 }
 
 .live-counter {
-    background: #218ceb; /* azul claro */
+    background: #218ceb !important;
     color: #000;
     text-align: center;
     padding: 1.5rem;
