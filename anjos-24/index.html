@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Downsell - Músicas dos Anjos | Oferta Especial</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+      background-image: linear-gradient(to bottom, #f3e8ff, #fff);
+      overflow-x: hidden;
+    }
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+    }
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .highlight-box {
+      border: 2px dashed #9333ea;
+      background: rgba(255, 255, 255, 0.9);
+      transform: rotate(-1deg);
+    }
+    .highlight-box:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+    .shimmer {
+      background: linear-gradient(to right, #f3e8ff 0%, #ddd6fe 20%, #f3e8ff 40%, #f3e8ff 100%);
+      background-size: 200% auto;
+      animation: shimmer 2s linear infinite;
+    }
+    @keyframes shimmer {
+      0% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.05);}
+      100% {transform: scale(1);}
+    }
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    @keyframes floating {
+      0% {transform: translateY(0px);}
+      50% {transform: translateY(-10px);}
+      100% {transform: translateY(0px);}
+    }
+    .timer-box {
+      background: rgba(126, 34, 206, 0.9);
+      border-radius: 12px;
+      padding: 10px;
+    }
+    .timer-segment {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 10px;
+      min-width: 50px;
+    }
+    .glowing {
+      box-shadow: 0 0 15px #fcd34d;
+      animation: glow 3s infinite alternate;
+    }
+    @keyframes glow {
+      from {box-shadow: 0 0 10px #fcd34d;}
+      to {box-shadow: 0 0 20px #fcd34d, 0 0 30px #f59e0b;}
+    }
+    .testimonial-card {
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+    .angel-divider {
+      height: 30px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cpath fill='%239333ea' d='M40 0c-3 10-12.5 20-20 20 7.5 0 17-10 20-20zm0 0c3 10 12.5 20 20 20-7.5 0-17-10-20-20z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 20px 0;
+    }
+    .gradient-border {
+      position: relative;
+    }
+    .gradient-border::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #7e22ce, #a855f7, #7e22ce);
+      border-radius: 16px;
+      z-index: -1;
+    }
+    
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.25rem !important;
+        line-height: 1.2 !important;
+      }
+      
+      h2 {
+        font-size: 1.875rem !important;
+      }
+      
+      h3 {
+        font-size: 1.5rem !important;
+      }
+      
+      p {
+        font-size: 1rem !important;
+      }
+      
+      .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+      
+      .timer-segment {
+        min-width: 40px !important;
+        padding: 8px !important;
+      }
+      
+      .mobile-py {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+      }
+      
+      .mobile-px {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      
+      .mobile-full {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      
+      .mobile-mb {
+        margin-bottom: 1.5rem !important;
+      }
+      
+      .mobile-mt {
+        margin-top: 1.5rem !important;
+      }
+      
+      .mobile-touch-target {
+        min-height: 48px !important;
+        min-width: 48px !important;
+      }
+      
+      .mobile-stack {
+        flex-direction: column !important;
+      }
+      
+      .mobile-center {
+        text-align: center !important;
+        justify-content: center !important;
+      }
+      
+      .cta-button {
+        width: 100% !important;
+        padding: 16px 24px !important;
+        font-size: 1.125rem !important;
+      }
+      
+      .mobile-hide {
+        display: none !important;
+      }
+      
+      .mobile-show {
+        display: block !important;
+      }
+      
+      .hero-section {
+        min-height: unset !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+      }
+      
+      .feature-item {
+        padding: 16px !important;
+      }
+    }
+    
+    /* Optimize touch targets */
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Sticky CTA for mobile */
+    .sticky-cta {
+      display: none;
+    }
+    
+    @media (max-width: 768px) {
+      .sticky-cta {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 10px 16px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+      }
+    }
+    
+    /* Optimize images for mobile */
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Improve scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Optimize button sizes for touch */
+    .btn-touch {
+      padding: 16px 24px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Background Music -->
+  <audio id="background-music" loop style="display:none;">
+    <source src="musicas-dos-anjos.mp3" type="audio/mpeg">
+  </audio>
+  
+  <!-- Play button for mobile (addresses autoplay restrictions) -->
+  <div class="fixed top-4 right-4 z-50 bg-white rounded-full p-2 shadow-md mobile-touch-target" id="play-music">
+    <i class="fas fa-music text-purple-700"></i>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center hero-section flex items-center" style="background-image:url('https://source.unsplash.com/1600x900/?heaven,clouds');">
+    <div class="absolute inset-0 bg-gradient-to-b from-purple-900 via-purple-800 to-purple-900 opacity-85"></div>
+    <div class="container mx-auto px-6 py-20 relative z-10 text-center">
+      <div class="mb-6">
+        <i class="fas fa-music text-yellow-300 text-4xl floating"></i>
+        <i class="fas fa-music text-yellow-300 text-3xl floating ml-4"></i>
+      </div>
+      <span class="inline-block py-2 px-4 bg-yellow-400 bg-opacity-90 text-purple-900 font-bold rounded-full mb-6 shadow-lg text-sm md:text-base">
+        ÚLTIMA OPORTUNIDADE POR TEMPO LIMITADO
+      </span>
+      <h1 class="text-3xl md:text-7xl font-playfair font-bold mb-6 text-white text-shadow leading-tight">
+        Músicas dos Anjos<br><span class="text-yellow-300">Por Apenas R$ 24,99</span>
+      </h1>
+      <p class="text-base md:text-2xl mb-10 text-white max-w-3xl mx-auto font-light leading-relaxed">
+        As raras frequências angelicais que <span class="font-semibold text-yellow-200">despertam vibrações celestiais</span> e aceleram seus milagres de prosperidade, saúde e relacionamentos.
+      </p>
+
+      <!-- Timer - Simplified for mobile -->
+      <div class="timer-box inline-block mb-10 px-3 py-2 md:px-6 md:py-4">
+        <p class="text-white text-xs md:text-sm mb-2">ESTA OFERTA EXPIRA EM:</p>
+        <div class="flex justify-center gap-1 md:gap-2">
+          <div class="timer-segment">
+            <span class="text-xl md:text-2xl font-bold text-white">00</span>
+            <span class="block text-xs text-white opacity-80">horas</span>
+          </div>
+          <div class="timer-segment">
+            <span class="text-xl md:text-2xl font-bold text-white" id="minutes">15</span>
+            <span class="block text-xs text-white opacity-80">min</span>
+          </div>
+          <div class="timer-segment">
+            <span class="text-xl md:text-2xl font-bold text-white" id="seconds">00</span>
+            <span class="block text-xs text-white opacity-80">seg</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://go.perfectpay.com.br/PPU38CPQ163?upsell=true" class="cta-button inline-block w-full sm:w-auto bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-500 text-purple-900 font-bold py-3 px-4 md:py-4 md:px-8 rounded-full text-base md:text-xl shadow-xl transition duration-300 transform hover:scale-105 pulse glowing mb-1">
+        SIM! QUERO RESGATAR MEU DESCONTO AGORA
+      </a>
+      <p class="text-white text-xs md:text-sm mt-1 mb-0">100% Seguro | Pagamento Protegido | Satisfação Garantida</p>
+    </div>
+  </section>
+
+  <div class="angel-divider mt-0 mb-0" style="margin-top:0!important;margin-bottom:0!important;height:18px;"></div>
+  
+  <!-- Story & Benefits - Optimized for mobile -->
+  <section class="py-10 md:py-16 container mx-auto px-4 md:px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10 md:mb-16">
+        <span class="text-purple-700 font-semibold text-sm md:text-base">REVELAÇÃO CELESTIAL</span>
+        <h2 class="text-2xl md:text-5xl font-playfair font-bold mb-4 md:mb-6">A Verdade Sobre As Músicas dos Anjos</h2>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">Durante minha peregrinação no Vaticano, tive acesso a um conhecimento guardado por séculos. O próprio Papa Leão XIV me confiou essas trilhas sagradas que, desde então, têm mudado vidas ao redor do mundo.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-xl p-4 md:p-8 mb-10 md:mb-16 gradient-border">
+        <h3 class="text-xl md:text-2xl font-bold mb-6 text-center text-purple-900">Por que essas músicas são verdadeiramente milagrosas?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+          <div>
+            <div class="flex mb-6">
+              <div class="shrink-0 mr-3 md:mr-4">
+                <div class="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center mobile-touch-target">
+                  <i class="fas fa-star text-purple-700 text-lg md:text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-base md:text-lg mb-2 text-purple-800">Frequências Angelicais Comprovadas</h4>
+                <p class="text-sm md:text-base text-gray-700">Estas melodias contêm frequências específicas utilizadas em rituais sagrados por mais de 2000 anos, sintonizadas para abrir canais espirituais.</p>
+              </div>
+            </div>
+            
+            <div class="flex mb-6">
+              <div class="shrink-0 mr-3 md:mr-4">
+                <div class="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center mobile-touch-target">
+                  <i class="fas fa-pray text-purple-700 text-lg md:text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-base md:text-lg mb-2 text-purple-800">Ressonância Vibratória Curativa</h4>
+                <p class="text-sm md:text-base text-gray-700">Cada nota foi cuidadosamente composta para ressoar com seus corpos energéticos, dissolvendo bloqueios e estimulando curas profundas.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex mb-6">
+              <div class="shrink-0 mr-3 md:mr-4">
+                <div class="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center mobile-touch-target">
+                  <i class="fas fa-hand-holding-heart text-purple-700 text-lg md:text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-base md:text-lg mb-2 text-purple-800">Proteção Espiritual Imediata</h4>
+                <p class="text-sm md:text-base text-gray-700">Ao ouvir estas músicas, você cria um campo de proteção angelical ao seu redor, afastando energias negativas e atraindo prosperidade.</p>
+              </div>
+            </div>
+            
+            <div class="flex mb-6">
+              <div class="shrink-0 mr-3 md:mr-4">
+                <div class="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center mobile-touch-target">
+                  <i class="fas fa-sun text-purple-700 text-lg md:text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-base md:text-lg mb-2 text-purple-800">Desbloqueio de Abundância</h4>
+                <p class="text-sm md:text-base text-gray-700">As melodias angelicais recodificam sua relação com dinheiro e abundância, removendo crenças limitantes e abrindo canais de prosperidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box p-4 md:p-6 rounded-lg text-center transition duration-300 max-w-2xl mx-auto my-8 md:my-12" style="margin-bottom:8px;">
+        <h3 class="text-lg md:text-2xl font-bold text-purple-800 mb-3 md:mb-4">O que está incluído no seu pacote sagrado:</h3>
+        <ul class="space-y-3 md:space-y-4 text-left text-sm md:text-base">
+          <li class="flex items-start">
+            <div class="shrink-0 mt-1 mr-2">
+              <i class="fas fa-check-circle text-purple-700"></i>
+            </div>
+            <span><strong class="text-purple-700">7 Músicas Angelicais Completas</strong> - cada uma sintonizada para um propósito específico (prosperidade, saúde, amor, proteção, paz interior, clareza mental e elevação espiritual).</span>
+          </li>
+          <li class="flex items-start">
+            <div class="shrink-0 mt-1 mr-2">
+              <i class="fas fa-check-circle text-purple-700"></i>
+            </div>
+            <span><strong class="text-purple-700">Guia de Uso Avançado</strong> - aprenda quando e como utilizar cada faixa para maximizar seus benefcios em diferentes situações da vida.</span>
+          </li>
+          <li class="flex items-start">
+            <div class="shrink-0 mt-1 mr-2">
+              <i class="fas fa-check-circle text-purple-700"></i>
+            </div>
+            <span><strong class="text-purple-700">Acesso Vitalício</strong> - faça download dos arquivos MP3 de alta qualidade para ouvir em qualquer dispositivo, a qualquer momento.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="angel-divider"></div>
+
+  <!-- Testimonials - Optimized for mobile -->
+  <section class="py-10 md:py-16 bg-purple-50" style="padding-top:8px;">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="text-center mb-8 md:mb-12">
+        <span class="text-purple-700 font-semibold text-sm md:text-base">VIDAS TRANSFORMADAS</span>
+        <h3 class="text-2xl md:text-4xl font-playfair font-bold mb-3 md:mb-4">O Que Dizem Os Beneficiados</h3>
+        <p class="text-sm md:text-base text-gray-700 max-w-2xl mx-auto">Estas são apenas algumas das centenas de histórias inspiradoras que recebemos diariamente de pessoas como você que tiveram suas vidas transformadas.</p>
+      </div>
+
+      <!-- Mobile-optimized testimonial slider -->
+      <div class="overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide" style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+        <div class="flex space-x-4" style="min-width: min-content;">
+        
+          <div class="testimonial-card bg-white rounded-xl overflow-hidden shadow-lg snap-center" style="min-width: 280px; max-width: 85vw;">
+            <div class="bg-purple-700 h-3"></div>
+            <div class="p-4 md:p-6">
+              <div class="flex flex-wrap items-center mb-4">
+                <div class="h-10 w-10 md:h-12 md:w-12 rounded-full bg-purple-100 flex items-center justify-center mr-3 md:mr-4">
+                  <i class="fas fa-user text-purple-700"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-sm md:text-base">Maria F.</p>
+                  <p class="text-xs md:text-sm text-gray-600">São Paulo - SP</p>
+                </div>
+                <div class="ml-auto mt-2 sm:mt-0">
+                  <div class="flex text-yellow-400 text-sm md:text-base">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="italic mb-4 text-sm md:text-base">"Depois de apenas 3 semanas ouvindo as Músicas dos Anjos diariamente, consegui quitar uma dívida de R$ 15.000 que me atormentava há anos. Meu marido, que estava distante, voltou a ser amoroso, e minha enxaqueca crônica desapareceu completamente!"</p>
+              <div class="text-purple-700 text-xs md:text-sm font-semibold">Resultado: Prosperidade financeira e harmonia familiar</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card bg-white rounded-xl overflow-hidden shadow-lg snap-center" style="min-width: 280px; max-width: 85vw;">
+            <div class="bg-purple-700 h-3"></div>
+            <div class="p-4 md:p-6">
+              <div class="flex flex-wrap items-center mb-4">
+                <div class="h-10 w-10 md:h-12 md:w-12 rounded-full bg-purple-100 flex items-center justify-center mr-3 md:mr-4">
+                  <i class="fas fa-user text-purple-700"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-sm md:text-base">João S.</p>
+                  <p class="text-xs md:text-sm text-gray-600">Rio de Janeiro - RJ</p>
+                </div>
+                <div class="ml-auto mt-2 sm:mt-0">
+                  <div class="flex text-yellow-400 text-sm md:text-base">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="italic mb-4 text-sm md:text-base">"As notas angelicais me acompanham todo dia no trabalho. Desde que comecei a ouvir, fechei 3 contratos importantes que estavam travados há meses. Minha ansiedade diminuiu drasticamente e me sinto protegido em todas as situações."</p>
+              <div class="text-purple-700 text-xs md:text-sm font-semibold">Resultado: Sucesso profissional e tranquilidade emocional</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card bg-white rounded-xl overflow-hidden shadow-lg snap-center" style="min-width: 280px; max-width: 85vw;">
+            <div class="bg-purple-700 h-3"></div>
+            <div class="p-4 md:p-6">
+              <div class="flex flex-wrap items-center mb-4">
+                <div class="h-10 w-10 md:h-12 md:w-12 rounded-full bg-purple-100 flex items-center justify-center mr-3 md:mr-4">
+                  <i class="fas fa-user text-purple-700"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-sm md:text-base">Luciana M.</p>
+                  <p class="text-xs md:text-sm text-gray-600">Belo Horizonte - MG</p>
+                </div>
+                <div class="ml-auto mt-2 sm:mt-0">
+                  <div class="flex text-yellow-400 text-sm md:text-base">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="italic mb-4 text-sm md:text-base">"Estava lutando contra um problema de saúde há 2 anos sem melhora. Após apenas 10 dias ouvindo as Músicas dos Anjos durante minha meditação matinal, os exames mostraram uma melhora inexplicável! Além disso, recebi uma proposta de emprego com salário 40% maior."</p>
+              <div class="text-purple-700 text-xs md:text-sm font-semibold">Resultado: Recuperação da saúde e oportunidade profissional</div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Scroll indicator for testimonials -->
+      <div class="flex justify-center mt-4 space-x-2">
+        <span class="h-2 w-2 rounded-full bg-purple-700"></span>
+        <span class="h-2 w-2 rounded-full bg-purple-300"></span>
+        <span class="h-2 w-2 rounded-full bg-purple-300"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="angel-divider"></div>
+
+  <!-- Guarantee & Offer - Optimized for mobile -->
+  <section class="bg-white py-10 md:py-16" id="comprar">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-6 md:mb-8">
+          <span class="inline-block py-1 px-3 md:px-4 bg-yellow-100 text-yellow-800 font-semibold rounded-full mb-2 text-xs md:text-sm">OFERTA COM TEMPO LIMITADO</span>
+          <h3 class="text-2xl md:text-4xl font-playfair font-bold">A Decisão Mais Importante Para Seu Futuro</h3>
+        </div>
+
+        <!-- Mobile optimized pricing and guarantee -->
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl shadow-lg mb-8 md:mb-12 overflow-hidden">
+          <!-- Top banner -->
+          <div class="bg-purple-700 text-white text-center py-3 px-4">
+            <p class="font-bold text-sm md:text-base">OFERTA ESPECIAL POR TEMPO LIMITADO</p>
+          </div>
+          
+          <!-- Content -->
+          <div class="p-4 md:p-8">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                <h4 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-center md:text-left">Quanto vale uma vida guiada pelos anjos?</h4>
+                <p class="mb-3 md:mb-4 text-sm md:text-base">Esta coleção nica de músicas angelicais, guardada em segredo por séculos, não tem preço. Pessoas pagariam milhares por esta transformação completa.</p>
+                
+                <div class="bg-white rounded-lg p-4 md:p-6 shadow-inner mb-4">
+                  <p class="font-medium text-gray-600 mb-1 md:mb-2 text-sm md:text-base">Preço original:</p>
+                  <p class="line-through text-gray-500 text-lg md:text-xl">R$ 69,00</p>
+                  
+                  <div class="h-px bg-gray-200 my-3 md:my-4"></div>
+                  
+                  <p class="font-medium text-gray-600 mb-1 md:mb-2 text-sm md:text-base">Oferta especial de hoje:</p>
+                  <div class="flex items-end">
+                    <span class="text-3xl md:text-4xl font-bold text-purple-700">R$ 24,99</span>
+                    <span class="ml-2 text-green-600 font-semibold text-sm md:text-base">50% OFF</span>
+                  </div>
+                  
+                  <div class="mt-2 text-center">
+                    <span class="inline-block bg-red-100 text-red-800 text-xs md:text-sm px-2 py-1 rounded-full">
+                      <i class="fas fa-clock mr-1"></i> Oferta expira em breve!
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2">
+                <div class="bg-white rounded-lg p-4 md:p-6 shadow-lg border-2 border-purple-200">
+                  <div class="mb-4 md:mb-6 text-center">
+                    <i class="fas fa-shield-alt text-3xl md:text-4xl text-purple-700"></i>
+                    <h4 class="text-lg md:text-xl font-bold mt-2">Garantia de 60 Dias</h4>
+                    <p class="text-gray-600 text-sm md:text-base">Satisfação total ou seu dinheiro de volta, sem perguntas.</p>
+                  </div>
+                  
+                  <a href="https://go.perfectpay.com.br/PPU38CPQ163?upsell=true" class="block bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-purple-900 font-bold py-4 px-4 md:px-8 rounded-xl text-lg md:text-xl shadow-lg transition duration-300 transform hover:scale-105 mb-4 glowing text-center mobile-touch-target">
+                    QUERO RESGATAR MEU DESCONTO POR R$ 24,99
+                  </a>
+                  
+                  <div class="flex items-center justify-center space-x-2 text-xs md:text-sm text-gray-600 mb-3">
+                    <i class="fas fa-lock"></i>
+                    <span>Pagamento 100% seguro</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ - Mobile optimized -->
+        <div class="mb-8 md:mb-12">
+          <h4 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center">Perguntas Frequentes</h4>
+          
+          <div class="space-y-3 md:space-y-4">
+            <div class="border border-purple-200 rounded-lg overflow-hidden">
+              <details>
+                <summary class="bg-purple-50 p-4 font-bold text-sm md:text-base cursor-pointer">
+                  Como vou receber as músicas?
+                </summary>
+                <div class="p-4 bg-white text-sm md:text-base">
+                  <p>Imediatamente após a confirmação do pagamento, você receberá um email com o link para download de todas as 7 músicas em formato MP3 de alta qualidade.</p>
+                </div>
+              </details>
+            </div>
+            
+            <div class="border border-purple-200 rounded-lg overflow-hidden">
+              <details>
+                <summary class="bg-purple-50 p-4 font-bold text-sm md:text-base cursor-pointer">
+                  Com qual frequência devo ouvir as músicas?
+                </summary>
+                <div class="p-4 bg-white text-sm md:text-base">
+                  <p>Recomendamos ouvir pelo menos uma música por dia, preferencialmente pela manhã para energizar seu dia ou à noite para limpar energias negativas acumuladas.</p>
+                </div>
+              </details>
+            </div>
+            
+            <div class="border border-purple-200 rounded-lg overflow-hidden">
+              <details>
+                <summary class="bg-purple-50 p-4 font-bold text-sm md:text-base cursor-pointer">
+                  Quanto tempo leva para ver resultados?
+                </summary>
+                <div class="p-4 bg-white text-sm md:text-base">
+                  <p>Muitas pessoas relatam mudanças imediatas na sensação de paz e bem-estar. Resultados mais tangveis como prosperidade financeira e melhorias na saúde geralmente começam a aparecer entre 7 e 21 dias de uso consistente.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">Não perca esta oportunidade única de transformação profunda</p>
+          <a href="https://go.perfectpay.com.br/PPU38CPQ163?upsell=true" class="inline-block bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white font-bold py-4 px-6 md:px-10 rounded-full text-lg md:text-xl shadow-lg transition duration-300 transform hover:scale-105 mobile-touch-target w-full md:w-auto">
+            QUERO RESGATAR MEU DESCONTO AGORA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky bottom CTA for mobile -->
+  <div class="sticky-cta" style="margin-bottom:0!important;padding-bottom:0!important;bottom:0;">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="font-bold text-purple-900 text-sm mb-0">R$ 24,99</p>
+        <p class="text-xs text-green-600 mb-0"><i class="fas fa-tag"></i> 50% OFF</p>
+      </div>
+      <a href="https://go.perfectpay.com.br/PPU38CPQ163?upsell=true" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-purple-900 font-bold py-2 px-4 rounded-lg text-sm shadow-md">
+        RESGATAR DESCONTO
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-purple-900 text-white py-6 md:py-8 text-center text-xs md:text-sm mt-8">
+    <div class="container mx-auto px-4 md:px-6">
+      <p>&copy; 2023 Músicas dos Anjos. Todos os direitos reservados.</p>
+      <div class="mt-3 md:mt-4">
+        <a href="#" class="text-white opacity-70 hover:opacity-100 mx-2 py-2 inline-block mobile-touch-target">Termos de Serviço</a>
+        <a href="#" class="text-white opacity-70 hover:opacity-100 mx-2 py-2 inline-block mobile-touch-target">Política de Privacidade</a>
+        <a href="#" class="text-white opacity-70 hover:opacity-100 mx-2 py-2 inline-block mobile-touch-target">Suporte</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Real-time countdown timer
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set minutes and seconds
+      let minutes = 15;
+      let seconds = 0;
+      
+      const minutesElement = document.getElementById('minutes');
+      const secondsElement = document.getElementById('seconds');
+      
+      // Update every second
+      const timer = setInterval(function() {
+        seconds--;
+        
+        if (seconds < 0) {
+          minutes--;
+          seconds = 59;
+        }
+        
+        if (minutes < 0) {
+          minutes = 15;
+          seconds = 0;
+        }
+        
+        minutesElement.textContent = minutes < 10 ? '0' + minutes : minutes;
+        secondsElement.textContent = seconds < 10 ? '0' + seconds : seconds;
+      }, 1000);
+      
+      // Handle play button for mobile (addresses autoplay restrictions)
+      const playButton = document.getElementById('play-music');
+      const backgroundMusic = document.getElementById('background-music');
+      
+      playButton.addEventListener('click', function() {
+        if (backgroundMusic.paused) {
+          backgroundMusic.play();
+          this.innerHTML = '<i class="fas fa-volume-up text-purple-700"></i>';
+        } else {
+          backgroundMusic.pause();
+          this.innerHTML = '<i class="fas fa-volume-mute text-purple-700"></i>';
+        }
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+
+    // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+    const link = 'https://quaresmacrista.site/ups-2/';
+
+    function setBackRedirect(url) {
+        let urlBackRedirect = url;
+        urlBackRedirect = urlBackRedirect =
+            urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+
+        history.pushState({}, '', location.href);
+        history.pushState({}, '', location.href);
+        history.pushState({}, '', location.href);
+
+        window.addEventListener('popstate', () => {
+            setTimeout(() => {
+                location.href = urlBackRedirect;
+            }, 1);
+        });
+    }
+
+    setBackRedirect(link);
+  </script>
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+</body>
+</html>
